@@ -1,14 +1,30 @@
 package com.restaurant.entity;
 
 public class StockValue {
-    private String unit;
-    private double value;
+    private Double quantity;
+    private Unit unit;
 
-    public StockValue(String unit, double value) {
-        this.unit = unit;
-        this.value = value;
+    public Double getQuantity() {
+        return quantity;
     }
 
-    public String getUnit() { return unit; }
-    public double getValue() { return value; }
+    public void setQuantity(Double quantity) {
+        this.quantity = quantity;
+    }
+
+    public Unit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Unit unit) {
+        this.unit = unit;
+    }
+
+    @Override
+    public String toString() {
+        return "StockValue{" +
+                "quantity=" + quantity +
+                ", unit=" + unit +
+                '}';
+    }
 }
